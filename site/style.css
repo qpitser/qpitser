@@ -1,0 +1,140 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* 기본설정 */
+
+* {margin: 0;
+    padding: 0;}
+img {vertical-align: bottom;}
+a {text-decoration: none;
+    color: #000;}
+ul, ol {list-style: none;}
+
+
+
+/* 헤더설정 */
+
+.logo {font-size: 30px;}
+.logo a {}
+
+/* 슬라이드 설정 */
+.topimg{max-width: 100%;
+    height: auto;}
+
+/* 네비설정 */
+
+.box1-2  {display: flex;
+    justify-content: flex-start;
+    align-items: center;}
+.gnb nav {}
+.gnb ul {display: flex;
+    align-items: center;
+    justify-content: flex-end;}
+.gnb a {display: block;
+    padding: 5px;
+    font-size: 14px;}
+.box1-2 a:hover {background-color: #666;}
+
+
+/* 공지사항 설정 */
+
+.notice {}
+.notice h2 {margin-bottom: 5px;
+    font-size: 18px;
+    color: #666;}
+.notice li {}
+.notice a {display: block;
+    font-size: 14px;
+    border-bottom: 2px #ddd dotted;
+padding: 5px;}
+.box3 li:hover {background-color: #666;}
+.notice time {float: left;}
+.notice .txt {float: none;
+    margin-left: 40px;
+    padding-left: 10px;}
+.notice a::after{content: '';
+display: block;
+clear: both;}
+
+/* 푸터설정 */
+.copyright {background-color: #ddd;}
+.copyright  {font-size: 14px;
+    color: #666;
+    padding: 15px 0;}
+
+/* 여백설정 */
+
+.box1 {padding: 8px 10px;}
+.box2 {}
+.box3 {padding: 15px 10px;}
+.footer {}
+
+/* 미디어쿼리구간 ################################# */
+
+/* 768px 이상일때 */
+@media (min-width:768px) {
+/* 레이아웃설정 */
+.box1 {display: flex;}
+.box1>div {width: 50%;}
+
+/* 네비설정 */
+.box1-2 {display: flex;
+    justify-content: flex-end;
+    align-items: center;}
+.gnb {}
+.gnb nav {}
+.gnb ul {display: flex;
+    align-items: center;
+    justify-content: flex-end;}
+
+
+
+}
+
+/* 와이드데스크탑설정 */
+@media (min-width:1280px) {
+
+/* 헤더설정 */
+
+.logo {font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;}
+.logo a {}
+
+/* 네비설정 */
+
+.box1-2 {display: flex;
+    justify-content: flex-end;
+    align-items: center;}
+.gnb {}
+.gnb nav {}
+.gnb ul {display: flex;
+    align-items: center;
+    justify-content: flex-end;}
+.gnb a {display: block;
+    padding: 5px;
+    font-size: 14px;}
+.gnb a:hover {background-color: #666;}
+.boxA {border-bottom: 1px solid #666;
+    padding: 8px 0;}
+
+/* 슬라이드 설정 */
+.topimg{max-width: 100%;
+    height: auto;
+    margin-top: 15px;}
+
+
+
+/* 공지사항 설정 */
+.notice h2{margin-top: 10px;}
+
+/* 푸터설정 */
+.footer {background-color: #ddd;
+    margin-top: 15px;}
+.copyright {display: block;
+    padding: 15px 0;}
+
+.box1, .copyright, .box2, .box3 {width: 1140px;
+    margin: 0 auto;}
+
+}
