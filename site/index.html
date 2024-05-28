@@ -15,6 +15,26 @@
 
     <!-- 폰트어썸 연결 -->
     <script src="https://kit.fontawesome.com/ed9c86e28a.js" crossorigin="anonymous"></script>
+
+    <!-- 제이쿼리 연결 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <script>
+        // 제이쿼리선언문
+     
+        // menuBtn을 클릭시 gnb가 toggle로 나타남.
+$(document).ready(function(){
+
+    $('.menuBtn').click(function(){
+
+        $('.gnb').slideToggle();
+    })
+})
+
+
+    </script>
+
 </head>
 
 <body>
@@ -22,10 +42,13 @@
         <div class="box1">
             <div class="box1-1">
                 <header>
-                    <h1 class="logo"><a href="">TimeSwitch</a></h1>
+                    <h1 class="logo"><a href=""><img src="img/logo-large.png" alt="" width="250" height="auto"></a></h1>
                 </header>
             </div>
             <div class="box1-2">
+
+                <button class="menuBtn"><i class="fa-solid fa-bars"></i></button>
+
                 <NAV class="gnb">
                     <ul>
                         <li><a href="">메인</a></li>
@@ -38,17 +61,65 @@
             </div>
         </div>
     </div>
-    <div class="box2"><img src="img/header.jpg" alt="" class="topimg"></div>
-    <div class="box3">
-        <div class="notice">
-            <h2>공지사항</h2>
+    <div class="box2">
+        <img src="img/header.jpg" alt="" class="topimg">
+    </div>
 
-            <ul>
-                <li><a href=""><time>04/05</time> <div class="txt">데이터센터 유지보수를 수행합니다.</div></a></li>
-                <li><a href=""><time>04/01</time> <div class="txt">안드로이드 애플리케이션 버전 1.2를 출시했습니다.</div></a></li>
-                <li><a href=""><time>03/22</time> <div class="txt">세미나/캠패인 과 관련된 공지사항</div></a></li>
-                <li><a href=""><time>02/15</time> <div class="txt">그래프 표시의변경 반식을 쉽게 바꿨습니다.</div></a></li>
-            </ul>
+    <div class="box6">
+        <div class="box6-1">
+            <a href="">
+                <div>
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                    <h2>데이터분석 / 해석</h2>
+                    <p>목적에 맞는 다양한 각도로<br> 데이터를 분석 해석합니다.</p>
+                </div>
+            </a>
+        </div>
+        <div class="box6-2">
+            <a href="">
+                <div>
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <h2>데이터 시각화</h2>
+                    <p>해석결과는 데이터 시각화해서<br> 활용할수 있게합니다</p>
+                </div>
+            </a>
+        </div>
+        <div class="box6-3">
+            <a href="">
+                <div>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <h2>24시간 지원</h2>
+                    <p>24시간 대응 팀으로<br> 장애에 신속하게 대응합니다.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="box3">
+        <div class="box3-1">
+            <div class="notice">
+                <h2>공지사항</h2>
+    
+                <ul>
+                    <li><a href=""><time>04/05</time> <div class="txt">데이터센터 유지보수를 수행합니다.</div></a></li>
+                    <li><a href=""><time>04/01</time> <div class="txt">안드로이드 애플리케이션 버전 1.2를 출시했습니다.</div></a></li>
+                    <li><a href=""><time>03/22</time> <div class="txt">세미나/캠패인 과 관련된 공지사항</div></a></li>
+                    <li><a href=""><time>02/15</time> <div class="txt">그래프 표시의변경 반식을 쉽게 바꿨습니다.</div></a></li>
+                </ul>
+        </div>
+
+        </div>
+        <div class="box3-2">
+            <div class="sns">
+                <h2>최신 정보를 여기서도 받아보세요!</h2>
+                <ul>
+                    <li><a href="" class="tw"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                    <li><a href="" class="face"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="" class="in"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                </ul>
+        </div>
+
         </div>
     </div>
     <div class="footer">
