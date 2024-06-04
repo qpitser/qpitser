@@ -1,0 +1,37 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 기본설정 */
+* {margin: 0;
+    padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+img {vertical-align: bottom;}
+
+/* 레이아웃 설정 */
+
+
+header {height: 100px;
+    background-color: #CBAE77;}
+.wrap .main {display: flex;
+    width: auto;
+    position: relative;
+    height: 700px;
+    flex-wrap: wrap;
+    background-color: aqua;}
+.wrap .hero {
+    position: absolute;
+    left: 100px;
+    width: 800px;
+    height: 700px;
+    background-color:antiquewhite;
+    text-align: center;
+    }
+.info {position: absolute;
+    background-color:aquamarine;
+    bottom: 50px;
+    left: 100px;
+    width: 350px;
+    height: 100px;}
+section {height: 700px;}
