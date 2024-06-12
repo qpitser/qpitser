@@ -302,7 +302,7 @@ header {}
     margin: 200px 0;}
 
 .wrap_exp .imgBox img {width: 890px;
-    height: 450px;
+    height: 500px;
     border-top-right-radius: 360px;
     border-bottom-right-radius: 360px;
     display: flex;
@@ -313,15 +313,25 @@ header {}
         border-top-left-radius: 360px;
         border-bottom-left-radius: 360px;
         display: flex;}
+
+.wrap_exp .imgBox img:hover {}
 .wrap_exp .txtBox {font-size: 20px;
     line-height: 30px;
     color: #fff;}
 
-    .wrap_exp .txtBox h3 {letter-spacing: 4px;}
+    .wrap_exp .txtBox h3 {letter-spacing: 4px;
+    text-align: center;}
     .wrap_exp .txtBox p {text-align: left;
         margin-top: 40px;}
     .wrap_exp .txtBox span {}
-    .wrap_exp .txtBox span a {}
+    .wrap_exp .txtBox span a {display: inline-block;
+        padding: 20px 190px;
+        border: 2px solid #009860;
+        background-color: #009860;
+        border-radius: 360px;
+        opacity: 0.8;
+        text-align: center;
+        margin-top: 30px;}
     .wrap_exp .txtBox i {color: green;
         font-size: 24px;}
 
