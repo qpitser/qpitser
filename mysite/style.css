@@ -94,6 +94,8 @@ section {
     background-color: rgba(187, 144, 63, 0.4);
 }
 
+.wrap section:nth-child(8) {height: 2120px;}
+
 /* 헤더설정 */
 header {}
 
@@ -141,7 +143,7 @@ header {}
 
 .main nav a:hover {
     color: #fff;
-    background-color: #009860;
+    text-decoration: underline;
 }
 
 .main ul li img {
@@ -259,6 +261,74 @@ header {}
 
 .listBox .exp_1 {width: 1080px;}
 
+/* 리뷰 설정 */
+
+/* 오시는길 설정 */
+
+/* 공지사항 설정 */
+
+.notice {display: flex;}
+.notice_inner h2 {text-align: left;
+    text-decoration: overline;}
+.notice_inner .txtBox {}
+.notice_inner .txtBox .titleBox {}
+.notice_inner .txtBox .titleBox {display: flex;
+    justify-content: space-between;}
+.notice_inner .txtBox .titleBox a {font-size: 20px;
+    font-weight: bold;}
+
+.notice .listBox {margin-top: 20px;}
+.notice_inner .listBox ul {display: flex;
+    flex-direction: column;
+    align-items: flex-start;}
+.notice_inner .listbox li {}
+.notice_inner .listBox a {font-size: 18px;
+    display: block;
+    padding: 20px;}
+
+.online .imgBox ul{display: flex;}
+.online .imgBox img {max-width: 620px;
+    height: 490px;
+    position: relative;}
+.online .imgBox div {position: absolute;}
+.online .imgBox li:nth-child(2) {display: none;}  
+.online .imgBox li:nth-child(3) {display: none;}
+/* 온라인전시관 설정 */
+
+/* 주변관광지 안내 설정 */
+
+/* 체험장 소개 설정 */
+.wrap_exp {display: flex;
+    margin: 200px 0;}
+
+.wrap_exp .imgBox img {width: 890px;
+    height: 450px;
+    border-top-right-radius: 360px;
+    border-bottom-right-radius: 360px;
+    display: flex;
+    margin-right: 20px;}
+
+.wrap_exp .imgBox_001 img {width: 890px;
+        height: 450px;
+        border-top-left-radius: 360px;
+        border-bottom-left-radius: 360px;
+        display: flex;}
+.wrap_exp .txtBox {font-size: 20px;
+    line-height: 30px;
+    color: #fff;}
+
+    .wrap_exp .txtBox h3 {letter-spacing: 4px;}
+    .wrap_exp .txtBox p {text-align: left;
+        margin-top: 40px;}
+    .wrap_exp .txtBox span {}
+    .wrap_exp .txtBox span a {}
+    .wrap_exp .txtBox i {color: green;
+        font-size: 24px;}
+
+/* 카페운영안내 설정 */
+
+/* 푸터 설정 */
+
 
 /* 미디어쿼리 구간설정 ################################################## */
 /* 와이드데스크탑 구간 */
@@ -266,8 +336,8 @@ header {}
 @media(min-width:1280px) {
 
     .main,
-    .imgBox {
-        width: 1240px;
+    .imgBox, .experience{
+        width: 1440px;
         margin: 0 auto;
     }
 
