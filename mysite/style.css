@@ -42,8 +42,11 @@ header {
     background-color: #CBAE77;
 }
 
-.wrap {
-    background-image: url();
+section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 30px;
+    border-left: 5px solid #8c5c02;
 }
 
 .wrap .main {
@@ -81,7 +84,7 @@ section {
 }
 
 .wrap section:nth-child(1) {
-    background-image: url(img/main.jpeg);
+    background-image: url(img/main.png);
     background-size: cover;
     background-position: center;
 }
@@ -94,7 +97,9 @@ section {
     background-color: rgba(187, 144, 63, 0.4);
 }
 
-.wrap section:nth-child(8) {height: 2120px;}
+.wrap section:nth-child(8) {
+    height: 2120px;
+}
 
 /* 헤더설정 */
 header {}
@@ -116,21 +121,16 @@ header {}
     margin-top: 10px;
 }
 
-.main nav ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
+/* 네비설정 */
 
 .main nav {
     width: calc(100% - 150px);
     padding: 10px;
 }
-
-.main .util {
-    position: absolute;
-    right: 80px;
-    top: 0;
+.main nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .main nav a {
@@ -146,12 +146,13 @@ header {}
     text-decoration: underline;
 }
 
-.main ul li img {
+
+/* 유틸설정 */
+
+.main .util {
     position: absolute;
-    top: 30%;
-    left: 160px;
-    opacity: 0.9;
-    display: none;
+    right: 80px;
+    top: 0;
 }
 
 .util ul {
@@ -161,6 +162,7 @@ header {}
 .util div {
     background-color: #fff;
 }
+
 
 /* 메인화면 설정 */
 .hero {
@@ -177,6 +179,8 @@ header {}
     width: 100%;
     height: 80px;
 }
+
+/* 인포설정 */
 
 .info {
     display: flex;
@@ -218,48 +222,130 @@ header {}
     color: #fffdd0;
 }
 
+/* 시계아이콘 설정 */
+
 .clock i {
     font-size: 80px;
-    position: absolute;
     left: 2px;
     bottom: 25px;
 }
 
 /* 갤러리 설정 */
-.imgBox {flex-wrap: wrap;}
 
-.imgBox ul {display: flex;
+.gallery .imgBox {
+    display: flex;
+justify-content: center;
+margin-top: 40px;
+}
+
+.gallery .imgBox ul {
+display: flex;
+width: 1215px;
+justify-content: space-between;
+}
+
+.gallery .imgBox li {
+width: 400px;
+height: 405px;
+margin-rignt: 5px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 
 }
 
-.imgBox li {width: 400px;}
+.gallery  .imgBox li a{ 
+
+}
+
+.gallery .imgBox li:nth-child(1) a:nth-child(1) {
+width: 100%;
+height: 150px;
+margin-bottom: 5px;
+}
+.gallery .imgBox li:nth-child(1) a:nth-child(2) {
+width: 48%;
+height: 150px;
+}
+.gallery .imgBox li:nth-child(1) a:nth-child(3) {
+width: 48%;
+height: 150px;
+}
+
+
+.gallery .imgBox li:nth-child(3) a:nth-child(1) {
+width: 100%;
+height: 150px;
+}
+.gallery .imgBox li:nth-child(3) a:nth-child(2) {
+width: 100%;
+height: 150px;
+}
+
+.gallery .imgBox img {margin: 10px;}
 
 
 /* 예약시스템 설정 */
-.titleBox ul {
+
+/* 카테고리 설정 */
+
+.system .titleBox {}
+
+.system .titleBox ul {
     display: flex;
     justify-content: center;
 }
 
-.listbox {
+/* 사진 설정 */
+
+.system .listBox {
     width: 1080px;
     height: 410px;
     background-color: #bb903f;
 }
 
-.listBox ul {
+.system .listBox ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.listBox img {
+.system .listBox img {
     border-radius: 50%;
     width: 250px;
     height: 250px;
 }
 
-.listBox .exp_1 {width: 1080px;}
+.system .listBox div:nth-child(3) {
+    display: none;
+}
+
+.system .listBox div:nth-child(4) {
+    display: none;
+}
+
+.system .listBox .exp_1 {
+    width: 1080px;
+}
+
+/* 입력창 설정 */
+
+.system .form_in {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bb903f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.system .form_in input {padding: 5px;
+    margin-top: 5px;}
+
+.system .form_in span a {
+    color: #fff;
+}
+
 
 /* 리뷰 설정 */
 
@@ -267,73 +353,159 @@ header {}
 
 /* 공지사항 설정 */
 
-.notice {display: flex;}
-.notice_inner h2 {text-align: left;
-    text-decoration: overline;}
+.notice {
+    display: flex;
+}
+
+.notice h2 {
+    text-align: center;
+    text-decoration: overline;
+    margin-top: 20px;
+}
+
 .notice_inner .txtBox {}
-.notice_inner .txtBox .titleBox {}
-.notice_inner .txtBox .titleBox {display: flex;
-    justify-content: space-between;}
-.notice_inner .txtBox .titleBox a {font-size: 20px;
-    font-weight: bold;}
 
-.notice .listBox {margin-top: 20px;}
-.notice_inner .listBox ul {display: flex;
+.notice_inner .txtBox .titleBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice_inner .txtBox .titleBox a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.notice_inner .listBox {
+    margin-top: 20px;
+}
+
+.notice_inner .listBox ul {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;}
-.notice_inner .listbox li {}
-.notice_inner .listBox a {font-size: 18px;
-    display: block;
-    padding: 20px;}
+    align-items: flex-start;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+}
 
-.online .imgBox ul{display: flex;}
-.online .imgBox img {max-width: 620px;
-    height: 490px;
-    position: relative;}
-.online .imgBox div {position: absolute;}
-.online .imgBox li:nth-child(2) {display: none;}  
-.online .imgBox li:nth-child(3) {display: none;}
+.notice_inner .listBox div:nth-child(2) {
+    display: none;
+}
+
+.notice_inner .listBox div:nth-child(3) {
+    display: none;
+}
+
+.notice_inner .listBox div:nth-child(4) {
+    display: none;
+}
+
+.notice_inner .listbox li {}
+
+.notice_inner .listBox a {
+    font-size: 18px;
+    display: block;
+    padding: 20px;
+}
+
+
 /* 온라인전시관 설정 */
+.online {
+    width: 50%;
+    height: auto;
+}
+
+.online ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.online .imgBox {
+    display: flex;
+    position: relative;
+}
+
+.online .imgBox img {
+    max-width: 100%;
+    height: 490px;
+    justify-content: center;
+}
+
+.online .imgBox div {
+    position: absolute;
+    color: #fff;
+    text-align: left;
+    left: 20px;
+    bottom: 20px;
+}
+
+.online .imgBox li:nth-child(2) {
+    display: none;
+}
+
+.online .imgBox li:nth-child(3) {
+    display: none;
+}
 
 /* 주변관광지 안내 설정 */
 
 /* 체험장 소개 설정 */
-.wrap_exp {display: flex;
-    margin: 200px 0;}
+.wrap_exp {
+    display: flex;
+    margin: 200px 0;
+}
 
-.wrap_exp .imgBox img {width: 890px;
+.wrap_exp .imgBox img {
+    width: 890px;
     height: 500px;
     border-top-right-radius: 360px;
     border-bottom-right-radius: 360px;
     display: flex;
-    margin-right: 20px;}
+    margin-right: 20px;
+}
 
-.wrap_exp .imgBox_001 img {width: 890px;
-        height: 450px;
-        border-top-left-radius: 360px;
-        border-bottom-left-radius: 360px;
-        display: flex;}
+.wrap_exp .imgBox_001 img {
+    width: 890px;
+    height: 450px;
+    border-top-left-radius: 360px;
+    border-bottom-left-radius: 360px;
+    display: flex;
+}
 
 .wrap_exp .imgBox img:hover {}
-.wrap_exp .txtBox {font-size: 20px;
-    line-height: 30px;
-    color: #fff;}
 
-    .wrap_exp .txtBox h3 {letter-spacing: 4px;
-    text-align: center;}
-    .wrap_exp .txtBox p {text-align: left;
-        margin-top: 40px;}
-    .wrap_exp .txtBox span {}
-    .wrap_exp .txtBox span a {display: inline-block;
-        padding: 20px 190px;
-        border: 2px solid #009860;
-        background-color: #009860;
-        border-radius: 360px;
-        opacity: 0.8;
-        text-align: center;
-        margin-top: 30px;}
-    .wrap_exp .txtBox i {color: green;
-        font-size: 24px;}
+.wrap_exp .txtBox {
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.wrap_exp .txtBox h3 {
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.wrap_exp .txtBox p {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.wrap_exp .txtBox span {}
+
+.wrap_exp .txtBox span a {
+    display: inline-block;
+    padding: 20px 190px;
+    border: 2px solid #009860;
+    background-color: #009860;
+    border-radius: 360px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wrap_exp .txtBox i {
+    color: green;
+    font-size: 24px;
+}
 
 /* 카페운영안내 설정 */
 
@@ -346,7 +518,10 @@ header {}
 @media(min-width:1280px) {
 
     .main,
-    .imgBox, .experience{
+    .imgBox,
+    .experience,
+    .notice,
+    .system {
         width: 1440px;
         margin: 0 auto;
     }
