@@ -392,17 +392,27 @@ header {}
     top: 50px;
 }
 
-.system .listBox ul li span {position: absolute;
+.system .listBox ul li span {
+    position: absolute;
     font-size: 50px;
     color: #fff;
-    font-family: "Merriweather", serif;}
+    font-family: "Merriweather", serif;
+}
 
-.system .listBox ul li .espre {left: 50px;
-    bottom: 100px;}
-.system .listBox ul li .latte {left: 535px;
-    bottom: 250px;}
-.system .listBox ul li .cappu {right: 20px;
-    bottom: 100px;}
+.system .listBox ul li .espre {
+    left: 50px;
+    bottom: 100px;
+}
+
+.system .listBox ul li .latte {
+    left: 535px;
+    bottom: 250px;
+}
+
+.system .listBox ul li .cappu {
+    right: 20px;
+    bottom: 100px;
+}
 
 .system .listBox div:nth-child(3) {
     display: none;
@@ -416,15 +426,20 @@ header {}
 
 .review .titleBox {}
 
-.review .titleBox ul {display: flex;
+.review .titleBox ul {
+    display: flex;
     justify-content: space-between;
-    text-align: center;}
+    text-align: center;
+}
 
-.review .titleBox ul li {margin: 20px 0;}
+.review .titleBox ul li {
+    margin: 20px 0;
+}
 
 .review .titleBox ul li:nth-child(2) {
     border-left: 5px solid #2d8d5b;
 }
+
 .review .titleBox ul li:nth-child(3) {
     border-left: 5px solid #2d8d5b;
 }
@@ -437,15 +452,19 @@ header {}
     border-left: 5px solid #2d8d5b;
 }
 
-.review .titleBox ul li a {display: block;
+.review .titleBox ul li a {
+    display: block;
     margin-right: 100px;
     margin-left: 50px;
-    font-size: 20px;}
+    font-size: 20px;
+}
 
-.review .imgBox {background-color: red;
+.review .imgBox {
+    background-color: red;
     width: 1100px;
     height: 470px;
-    border-radius: 60px;}
+    border-radius: 60px;
+}
 
 .review .imgBox .left {}
 
@@ -465,13 +484,17 @@ header {}
     margin-top: 28px;
 }
 
-.notice_inner .txtBox {position: relative;
+.notice_inner .txtBox {
+    position: relative;
     font-size: 20px;
-    margin-top: 20px;}
+    margin-top: 20px;
+}
 
-.notice_inner .txtBox span {position: absolute;
+.notice_inner .txtBox span {
+    position: absolute;
     top: 2px;
-    right: 50px;}
+    right: 50px;
+}
 
 .notice_inner .txtBox .titleBox {
     display: flex;
@@ -557,13 +580,97 @@ header {}
 
 /* 주변관광지 안내 설정 */
 
-.around {display: flex;
-    height: 1000px;}
-.around .txtBox {width: 35%;
+.around {
+    display: flex;
+    height: 1000px;
+}
+
+.around .txtBox {
+    width: 35%;
     background-color: #2d8d5b;
-    height: 100%;}
-.around .imgBox {width: 65%;
-    background-color: #8c5c02;}
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.around .txtBox h2 {
+    font-size: 48px;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.around .txtBox span {
+    text-decoration: overline;
+    text-decoration-color: #bb903f;
+}
+
+.around .txtBox p {
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+.around .txtBox i {
+    font-size: 50px;
+    padding: 30px 20px;
+}
+
+.around .txtBox ul {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.around .imgBox {
+    width: 65%;
+    background-color: #8c5c02;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.around .imgBox img {
+    width: 370px;
+    height: 460px;
+}
+
+.around .imgBox ul {
+    display: flex;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.around .imgBox ul li {
+    margin-right: 20px;
+}
+
+.around .imgBox .travel {
+    background-color: #2d8d5b;
+    width: 100%;
+    height: 160px;
+}
+
+.around .imgBox .travel p {
+    text-align: left;
+    padding: 5px 20px;
+}
+.around .imgBox .travel p:nth-child(1) {padding-top: 10px;}
+
+.around .imgBox .travel p:nth-child(2) {font-size: 36px;
+    font-weight: bold;}
+
+.around .imgBox .travel p:nth-child(3) {font-size: 24px;}
+
+.around .imgBox .travel span {float: right;}
+
+.around .imgBox .travel p i {
+    font-size: 20px;
+}
+
+.around .imgBox .travel a p {font-size: 36px;
+    font-weight: bold;}
+
 /* 체험장 소개 설정 */
 .wrap_exp {
     display: flex;
@@ -596,6 +703,7 @@ header {}
 }
 
 .wrap_exp .txtBox h3 {
+    font-size: 32px;
     letter-spacing: 4px;
     text-align: center;
 }
@@ -624,6 +732,8 @@ header {}
 }
 
 /* 카페운영안내 설정 */
+
+
 
 /* 푸터 설정 */
 
