@@ -34,6 +34,7 @@ body {
     font-family: "Nanum Gothic", sans-serif;
 }
 
+
 /* 레이아웃 설정 */
 
 
@@ -46,7 +47,7 @@ section h1 {
     font-size: 32px;
     font-weight: bold;
     padding: 30px;
-    border-left: 5px solid #8c5c02;
+    color: #fff;
 }
 
 .wrap .main {
@@ -97,6 +98,10 @@ section {
     background-color: rgba(187, 144, 63, 0.4);
 }
 
+.wrap section:nth-child(7) {
+    height: 1000px;
+}
+
 .wrap section:nth-child(8) {
     height: 2120px;
 }
@@ -127,6 +132,7 @@ header {}
     width: calc(100% - 150px);
     padding: 10px;
 }
+
 .main nav ul {
     display: flex;
     width: 100%;
@@ -234,101 +240,63 @@ header {}
 
 .gallery .imgBox {
     display: flex;
-justify-content: center;
-margin-top: 40px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .gallery .imgBox ul {
-display: flex;
-width: 1215px;
-justify-content: space-between;
+    display: flex;
+    width: 1215px;
+    justify-content: space-between;
 }
 
 .gallery .imgBox li {
-width: 400px;
-height: 405px;
-margin-rignt: 5px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+    width: 400px;
+    height: 405px;
+    margin-rignt: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 }
 
-.gallery  .imgBox li a{ 
-
-}
+.gallery .imgBox li a {}
 
 .gallery .imgBox li:nth-child(1) a:nth-child(1) {
-width: 100%;
-height: 150px;
-margin-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
 }
+
 .gallery .imgBox li:nth-child(1) a:nth-child(2) {
-width: 48%;
-height: 150px;
+    width: 48%;
+    height: 150px;
 }
+
 .gallery .imgBox li:nth-child(1) a:nth-child(3) {
-width: 48%;
-height: 150px;
+    width: 48%;
+    height: 150px;
 }
 
 
 .gallery .imgBox li:nth-child(3) a:nth-child(1) {
-width: 100%;
-height: 150px;
-}
-.gallery .imgBox li:nth-child(3) a:nth-child(2) {
-width: 100%;
-height: 150px;
+    width: 100%;
+    height: 150px;
 }
 
-.gallery .imgBox img {margin: 10px;}
+.gallery .imgBox li:nth-child(3) a:nth-child(2) {
+    width: 100%;
+    height: 150px;
+}
+
+.gallery .imgBox img {
+    margin: 10px;
+}
 
 
 /* 예약시스템 설정 */
 
-/* 카테고리 설정 */
-
-.system .titleBox {}
-
-.system .titleBox ul {
-    display: flex;
-    justify-content: center;
-}
-
-/* 사진 설정 */
-
-.system .listBox {
-    width: 1080px;
-    height: 410px;
-    background-color: #bb903f;
-}
-
-.system .listBox ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.system .listBox img {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-}
-
-.system .listBox div:nth-child(3) {
-    display: none;
-}
-
-.system .listBox div:nth-child(4) {
-    display: none;
-}
-
-.system .listBox .exp_1 {
-    width: 1080px;
-}
-
-/* 입력창 설정 */
+.system {}
 
 .system .form_in {
     display: flex;
@@ -339,15 +307,149 @@ height: 150px;
     border-radius: 10px;
 }
 
-.system .form_in input {padding: 5px;
-    margin-top: 5px;}
+.system .form_in input {
+    padding: 5px;
+    margin-top: 5px;
+}
 
 .system .form_in span a {
     color: #fff;
 }
 
+.system .titleBox {}
 
-/* 리뷰 설정 */
+.system .titleBox ul {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 600px;
+}
+
+.system .titleBox ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.system .titleBox ul li:nth-child(2) {
+    border-left: 5px solid #bb903f;
+}
+
+.system .titleBox ul li:nth-child(3) {
+    border-left: 5px solid #bb903f;
+}
+
+.system .titleBox ul li a {
+    font-size: 20px;
+    display: block;
+    padding-left: 80px;
+}
+
+.system .titleBox ul li a:hover {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px
+}
+
+
+.system .listBox {
+    position: relative;
+    background-color: #bb903f;
+    width: 1200px;
+    height: 410px;
+    border-radius: 60px;
+    left: 120px;
+}
+
+.system .listBox p {
+    text-align: left;
+    color: #fff;
+    padding: 20px 50px;
+}
+
+.system .listBox ul {}
+
+.system .listBox ul li {}
+
+.system .listBox ul li img {
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.system .listBox ul li .img1 {
+    left: 20px;
+    top: 50px;
+}
+
+.system .listBox ul li .img2 {
+    left: 475px;
+    bottom: 20px;
+}
+
+.system .listBox ul li .img3 {
+    right: 20px;
+    top: 50px;
+}
+
+.system .listBox ul li span {position: absolute;
+    font-size: 50px;
+    color: #fff;
+    font-family: "Merriweather", serif;}
+
+.system .listBox ul li .espre {left: 50px;
+    bottom: 100px;}
+.system .listBox ul li .latte {left: 535px;
+    bottom: 250px;}
+.system .listBox ul li .cappu {right: 20px;
+    bottom: 100px;}
+
+.system .listBox div:nth-child(3) {
+    display: none;
+}
+
+.system .listBox div:nth-child(4) {
+    display: none;
+}
+
+/* 리뷰설정 */
+
+.review .titleBox {}
+
+.review .titleBox ul {display: flex;
+    justify-content: space-between;
+    text-align: center;}
+
+.review .titleBox ul li {margin: 20px 0;}
+
+.review .titleBox ul li:nth-child(2) {
+    border-left: 5px solid #2d8d5b;
+}
+.review .titleBox ul li:nth-child(3) {
+    border-left: 5px solid #2d8d5b;
+}
+
+.review .titleBox ul li:nth-child(4) {
+    border-left: 5px solid #2d8d5b;
+}
+
+.review .titleBox ul li:nth-child(5) {
+    border-left: 5px solid #2d8d5b;
+}
+
+.review .titleBox ul li a {display: block;
+    margin-right: 100px;
+    margin-left: 50px;
+    font-size: 20px;}
+
+.review .imgBox {background-color: red;
+    width: 1100px;
+    height: 470px;
+    border-radius: 60px;}
+
+.review .imgBox .left {}
+
+.review .imgBox ul {}
 
 /* 오시는길 설정 */
 
@@ -360,19 +462,26 @@ height: 150px;
 .notice h2 {
     text-align: center;
     text-decoration: overline;
-    margin-top: 20px;
+    margin-top: 28px;
 }
 
-.notice_inner .txtBox {}
+.notice_inner .txtBox {position: relative;
+    font-size: 20px;
+    margin-top: 20px;}
+
+.notice_inner .txtBox span {position: absolute;
+    top: 2px;
+    right: 50px;}
 
 .notice_inner .txtBox .titleBox {
     display: flex;
     justify-content: space-between;
+    width: 400px;
+    margin-left: 20px;
 }
 
 .notice_inner .txtBox .titleBox a {
     font-size: 20px;
-    font-weight: bold;
 }
 
 .notice_inner .listBox {
@@ -448,6 +557,13 @@ height: 150px;
 
 /* 주변관광지 안내 설정 */
 
+.around {display: flex;
+    height: 1000px;}
+.around .txtBox {width: 35%;
+    background-color: #2d8d5b;
+    height: 100%;}
+.around .imgBox {width: 65%;
+    background-color: #8c5c02;}
 /* 체험장 소개 설정 */
 .wrap_exp {
     display: flex;
@@ -521,7 +637,9 @@ height: 150px;
     .imgBox,
     .experience,
     .notice,
-    .system {
+    .system,
+    .review,
+    .around {
         width: 1440px;
         margin: 0 auto;
     }

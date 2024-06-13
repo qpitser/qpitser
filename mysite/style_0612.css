@@ -286,6 +286,7 @@ header {}
     width: 1080px;
     height: 410px;
     background-color: #bb903f;
+    position: relative;
 }
 
 .listBox ul {
@@ -300,7 +301,12 @@ header {}
     height: 250px;
 }
 
-.listBox .exp_1 {width: 1080px;}
+.listBox .exp_1 {width: 1080px;
+    position: absolute;}
+
+
+.listBox .exp_1 .img1 {left: 0;
+    top: 0;}
 
 
 /* 미디어쿼리 구간설정 ################################################## */
