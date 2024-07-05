@@ -1,0 +1,169 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+img {vertical-align: bottom;}
+a {text-decoration: none;
+    color: #fff;}
+ul, ol {list-style: none;}
+
+
+/* 메인설정 */
+header {height: 100px;}
+
+header .main {display: flex;
+    background-color: blue;
+    height: 100px;
+    position: fixed;
+    width: 100%;}
+
+header .main img {height: 100px;
+    margin-left: 20px;}
+
+header .main nav {}
+
+header .main nav ul {position: absolute;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    margin-left: 50px;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+header .main nav ul li {
+}
+
+header .main nav ul li a {font-size: 18px;
+    display: block;
+    padding: 5px;}
+
+/* 유틸설정 */
+
+header .util {width: 300px;
+    height: 100px;
+    position: absolute;
+    right: 0;}
+
+header .util img {height: 50px;}
+
+header .util ul {display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;}
+
+header .util ul li {margin-right: 30px;}
+
+header .util ul li a {}
+
+
+
+
+
+/* 세션1 설정 */
+section:nth-child(1) {}
+
+section:nth-child(1) video {width: 100%;}
+
+
+/* 세션2 설정 */
+
+section:nth-child(2) {height: 740px;
+    background: linear-gradient(145deg,#05a8f5 50%, #000000 50%);}
+
+.info_wrap {display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;}
+
+.info_wrap .txtBox {font-size: 20px;
+    color: #fff;
+    margin-right: 20px;}
+
+.info_wrap .txtBox h2 {font-size: 28px}
+
+.info_wrap .txtBox p {margin: 20px 0;}
+
+.info_wrap .txtBox h3 {}
+
+.info_wrap .txtBox span {font-size: 40px;}
+
+.info_wrap .imgBox {display: flex;
+    flex-direction: column;}
+
+.info_wrap .imgBox img {margin: 20px 0;}
+
+/* 세션 3 설정 */
+section:nth-child(3) {height: 740px;
+    background: linear-gradient(145deg,#05a8f5 50%, #000000 50%);
+    position: relative;}
+section>h2 {text-align: center;}
+.view {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.korea_inner .imgBox {width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 20%;
+    left: 20%;}
+
+.korea_inner .imgBox img {width: 350px;
+    height: 350px;}
+
+.korea_inner .txtBox {position: absolute;
+    right: 20%;
+    bottom: 10%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .korea_inner .txtBox h2 {font-size: 80px;}
+
+    .korea_inner .txtBox p {font-size: 32px;
+    line-height: 2;}
+
+    .korea_inner .txtBox h3 {font-size: 40px;}
+
+
+section .korea_inner {display: flex;}
+
+section .korea_inner div:nth-child(3) {display: none;}
+
+section .korea_inner div:nth-child(4) {display: none;}
+
+section .korea_inner div:nth-child(5) {display: none;}
+
+section .korea_inner div:nth-child(6) {display: none;}
+
+section .korea_inner img {border-radius: 15px;}
+
+
+
+/* 세션 4 설정 */
+
+/* 세션 5 설정 */
+
+/* 세션 6 설정 */
+
+/* 미디어 쿼리 구간설정 --------------------------------------------------------------------------------------- */ 
+
+@media(min-width:1280px) {
+    .main {width: 100%;
+        margin: 0 auto;}
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrap">
+    
+        <div class="center"></div>
+        <div class="left1">
+           
+                <p>버몬트주 벌링턴의 주유소를 개조한 곳부터 우리가 가끔 잘못 발음하는 이름을 가진 먼 곳까지<br>
+                    1978년에 두 남자가 시작한 아이스크림 사업의 여정은 매력적인 아이스크림만큼이나 전설적인 이야기입니다.</p>
+        </div>
+        <div class="right1">
+            <div class="circle"></div>
+            <div class="line"></div>
+        </div>
+        <div class="left2"></div> 
+        <div class="right2"></div>
+    
+</div>
+
+    <style>
+        .wrap {position: relative;
+
+          
+                width: 1024px;
+                height: 12800px;
+            background-color: antiquewhite;
+        margin: 0 auto;
+    
+    
+        margin-top: 250px;}
+        .center { position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: black;
+            left: 50%;
+            top: 0;
+        margin-left: -1px;}
+
+
+        .left1 {width: 50%;
+        height: 300px;
+        text-align: right;
+ 
+    position: absolute;
+left:0;
+transition: all 1.2s;
+top: 0;}
+    
+    .right1 {width: 50%;
+        height: 300px;
+    background-color:#5599dd;
+position: absolute;
+right: -100%;
+transition: all 1.2s;
+top: 300px;}
+    
+    .left2 {width: 50%;
+        height: 300px;
+    background-color:#33dd99;
+position: absolute;
+left: 0;
+transition: all 1.2s;
+top: 600px;}
+    
+    .right2 {width: 50%;
+        height: 300px;
+    background-color:#99cc99;
+    position: absolute;
+right: 0;
+top: 900px;}
+
+
+.circle {width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: red;
+position: absolute;
+left: -25px;}
+    </style>
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $(window).scroll(function(){
+
+            var sc = $(this).scrollTop();
+
+            if(sc>=150 && sc<=300){
+
+                $('.left1').css({'left':0})
+
+
+
+                
+            }
+
+
+            if(sc>=301 && sc<=600){
+
+$('.right1').css({'right':0})
+
+
+}
+
+
+if(sc>=601 && sc<=900){
+
+$('.left2').css({'left':0})
+
+
+}
+        })
+    })
+</script>
+    
+</body>
+</html>
