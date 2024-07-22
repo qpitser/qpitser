@@ -1,0 +1,760 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Varsity';
+    src: url(varsity_regular.ttf);
+}
+
+
+
+/* 폰트,컬러 모음 */
+
+/* 
+폰트
+font-family: "Bebas Neue", sans-serif;
+font-family: 'Varisty'
+font-family: "Jua", sans-serif;
+
+
+컬러
+한화 #f37321
+다저스 파란색 #005A9C
+다저스 빨간색 #EF3E42
+
+*/
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {height: 12000px;
+    background-color: #000;}
+
+/* 헤더설정 */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+}
+
+header nav {
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 30px;
+    color: #fff;
+}
+
+header nav ul li:hover {
+    color: #f37321;
+    font-size: 32px;
+}
+
+header nav ul li:nth-child(4):hover {
+    color: #005A9C;
+}
+
+/* 세션설정 */
+
+article.on {
+    left: 0;
+    top: 100px;
+}
+
+
+
+
+
+
+
+/* 팀/프로필 설정 */
+
+.profile {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+}
+
+article {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: absolute;
+    top: 100px;
+    right: 100%;
+    overflow: hidden;
+    transition: all 0.8s;
+}
+
+.art1 {
+    left: -100%;
+    overflow: visible;
+}
+
+.art2 {
+    background-color: #000;
+    top: 100%;
+}
+
+.art3 {
+    background-color: green;
+    right: 100%;
+    top: -100%;
+}
+
+.art4 {
+    background-color: purple;
+    left: -100%;
+}
+
+
+.profile section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+
+.profile .info div {
+    width: 19%;
+    height: 100%;
+    background-image: url(img/divider.png);
+    position: relative;
+    float: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 1.5s;
+}
+
+/* 왼쪽요소 설정 */
+.profile .profile_team {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -300px;
+}
+
+.profile .profile_team h1 {
+    font-size: 80px;
+    font-family: 'Varsity';
+    color: #f37321;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.profile .profile_team p {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.profile .profile_team img {
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* 오른쪽요소 설정 */
+.profile .info div h2 {
+    position: absolute;
+    color: #f37321;
+    left: 20px;
+    z-index: 3;
+    top: 50%;
+    border-left: 2px solid #d9d9d9;
+    padding-left: 15px;
+    margin-top: -350px;
+}
+
+.profile .info div p {
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    right: -300px;
+    bottom: 150px;
+    color: #fff;
+}
+
+.profile .info div div {
+    width: 100%;
+    background-color: #262626;
+    opacity: 0.6;
+    height: 0;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    margin-top: -380px;
+}
+
+/* 이미지 전체설정 */
+.profile .info div img {
+    position: absolute;
+    right: -500px;
+    width: 300px;
+    height: 300px;
+    bottom: 100px;
+}
+
+/* 이글스파크 설정 */
+
+.profile .info div .park {
+    width: 100%;
+    height: 100%;
+}
+
+.profile .info div .park_text {
+    width: 220px;
+    background-color: #d9d9d9;
+    font-size: 32px;
+    display: block;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    background-color: rgba(243, 115, 33, 0.6);
+    font-weight: bold;
+}
+
+
+/* 프로빌 호버이벤트 설정 */
+
+
+.profile .info div:hover {
+    width: 30%;
+}
+
+.profile .info div:hover div {
+    height: 100px;
+}
+
+/* 첫번째 카테고리 호버시 이미지,텍스트 설정 */
+
+.profile .info div:hover .symbol_text {
+    right: 50%;
+    margin-right: -30px;
+    bottom: 400px;
+}
+
+.profile .info div:hover .symbol {
+    right: 50%;
+    margin-right: -150px;
+    bottom: 400px;
+}
+
+.profile .info div:hover .wordmark {
+    right: 50%;
+    margin-right: -150px;
+    bottom: 100px;
+}
+
+.profile .info div:hover .wordmark_text {
+    right: 50%;
+    margin-right: -50px;
+    bottom: 100px;
+}
+
+
+/* 두번째 카테고리 호버시 이미지,텍스트 설정 */
+
+.profile .info div:hover .park_text {
+    right: 0;
+}
+
+.profile .info div:hover .park {
+    left: 0;
+    top: 0;
+}
+
+
+/* 세번째 카테고리 호버시 이미지,텍스트 설정 */
+
+.profile .info div:hover .away {
+    width: 250px;
+    right: 0;
+}
+
+.profile .info div:hover .home {
+    width: 250px;
+    right: 50%;
+}
+
+.profile .info div:hover .home_text {
+    right: 70%;
+    margin-right: -20px;
+    margin-top: -30px;
+    top: 50%;
+}
+
+.profile .info div:hover .away_text {
+    right: 20%;
+    margin-right: -20px;
+    margin-top: -30px;
+    top: 50%;
+}
+
+
+
+
+/* 스크롤다운 설정 */
+.profile .scroll {
+    position: absolute;
+    bottom: 150px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -90px;
+    color: #fff;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    animation: bounce 2s linear infinite;
+}
+
+.profile i {
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    z-index: 5;
+    font-size: 80px;
+    animation: bounce 2s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-15px)
+    }
+}
+
+
+/* 개인프로필 설정 */
+
+.profile_solo {
+    width: 100%;
+    height: 1200px;
+    background-color: antiquewhite;
+}
+
+.profile_ind {
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+    color: #fff;
+}
+
+.profile_ind .profile_left {
+    width: 33.3333%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profile_ind .profile_left h1 {
+    font-size: 70px;
+    color: #f37321;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+.profile_ind .profile_left h2 {
+    font-size: 50px;
+    font-family: 'Varsity';
+    text-align: center;
+    font-weight: 400;
+    margin-left: -30px;
+    margin-bottom: 30px;
+}
+
+.profile_ind .profile_left p {
+    font-size: 18px;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.profile_ind .profile_center {
+    width: 33.3333%;
+}
+
+.profile_ind .profile_center div {
+    width: 100%;
+    height: 100%;
+    background-color: #f37321;
+    display: flex;
+    justify-content: center;
+    transform: skewX(-15deg);
+}
+
+.profile_ind .profile_center img {}
+
+.profile_ind .profile_center .profile_img {
+    width: 90%;
+    height: 100%;
+    background-image: url(img/hanwha/profile.jpg);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    transform: skewX(0deg);
+}
+
+.profile_ind .profile_right {
+    width: 33.3333%;
+}
+
+.profile_ind .profile_right span {
+    position: absolute;
+}
+
+/* 원형차트 설정 */
+.profile_chart {
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -400px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background: conic-gradient(#f37321 0% 87%,
+            #32CD32 87% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_chart2 {
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background: conic-gradient(#f37321 0% 93%,
+            #00BFFF 93% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_chart3 {
+    position: relative;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background: conic-gradient(#f37321 0% 85%,
+            #6A5ACD 85% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 도넛 안쪽 원 설정 */
+
+.chart_bar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+
+
+
+
+.profile_chart p {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+}
+
+.profile_chart2 p {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+}
+
+.profile_chart3 p {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+}
+
+
+
+
+/* .profile_chart:after{
+        content:'';
+        background: #000;
+        position: absolute;
+        top:50%; left:50%;
+        width:150px; height:150px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      } */
+
+
+/* 경기영상 설정 */
+
+.art2 {
+    color: #fff;
+    position: fixed;
+    perspective: 1500px;
+}
+
+.art2 .game {position: relative;
+    opacity: 0.6;}
+
+/* 이름설정 */
+.art2 .game h1 {
+    font-size: 70px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    color: #fff
+}
+
+/* 이름 옆 로고 설정 */
+.art2 .game .game_logo {
+    position: absolute;
+    width: 150px;
+    top: 25px;
+    left: 50%;
+    margin-left: -370px;
+}
+
+/* 로고 옆 팀설정 */
+.art2 .game h2 {
+    position: absolute;
+    left: 50%;
+    top: 22.5px;
+    margin-left: -200px;
+    font-size: 32px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+}
+
+.art2 .game p {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -550px;
+}
+
+/* 경기결과 설정 */
+.art2 .game .game_result {
+    width: 350px;
+    height: 130px;
+    border-radius: 30px;
+    background-color: #fff;
+    opacity: 0.8;
+    color: #000;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    text-align: center;
+    z-index: 99;
+}
+
+.art2 .game .game_result h3 {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.art2 .game .game_result span {
+    line-height: 3;
+    margin: 0 20px;
+}
+
+.art2 .game .game_result .point {
+    font-size: 28px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* 경기영상 설정 */
+.art2 .game .game_video {
+    width: 350px;
+    height: 200px;
+    background-color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    top: 300px;
+    border-radius: 30px;
+    left: 30px;
+    z-index: 99;
+}
+
+/* 경기기록 설정 */
+.art2 .game .game_record {
+    width: 350px;
+    height: 250px;
+    background-color: #f37321;
+    position: absolute;
+    left: 30px;
+    border-radius: 30px;
+    top: 50%;
+    margin-top: 550px;
+    text-align: center;
+    z-index: 99;
+}
+
+.art2 .game .game_record div {
+    width: 350px;
+    height: 80px;
+    line-height: 2.5;
+    border-bottom: 0.5px solid #000;
+    font-size: 32px;
+    font-family: "Jua", sans-serif;
+    font-weight: bold;
+}
+
+.art2 .game .game_record span {
+    line-height: 1.5;
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+.art2 .game .game_record2 {
+    width: 350px;
+    height: 250px;
+    background-color: #333;
+    color: #f37321;
+    position: absolute;
+    left: 50%;
+    margin-left: -180px;
+    border-radius: 30px;
+    top: 50%;
+    margin-top: 500px;
+    text-align: center;
+    z-index: 99;
+}
+
+.art2 .game .game_record2 div {
+    width: 350px;
+    height: 80px;
+    line-height: 2.5;
+    border-bottom: 0.5px solid #000;
+    font-size: 32px;
+    font-family: "Jua", sans-serif;
+    font-weight: bold;
+}
+
+.art2 .game .game_record2 span {
+    line-height: 1.5;
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+.art2 .game .game_record3 {
+    width: 350px;
+    height: 250px;
+    background-color: #f37321;
+    position: absolute;
+    right: 30px;
+    border-radius: 30px;
+    top: 50%;
+    margin-top: 550px;
+    text-align: center;
+    z-index: 99;
+}
+
+.art2 .game .game_record3 div {
+    width: 350px;
+    height: 80px;
+    line-height: 2.5;
+    border-bottom: 0.5px solid #000;
+    font-size: 32px;
+    font-family: "Jua", sans-serif;
+    font-weight: bold;
+}
+
+.art2 .game .game_record3 span {
+    line-height: 1.5;
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+/* 백그라운드 설정 */
+
+.art2 .game .game_ryu {
+    position: absolute;
+    width: 1300px;
+    height: auto;
+    z-index: 1;
+    right: 0;
+}
+
+.game.on {z-index: 99;
+    opacity: 1;}
+
+.art2 section:nth-child(1) {transform: translateZ(0px);}
+
+.art2 section:nth-child(2) {transform: translateZ(-3000px);}
+
+.art2 section:nth-child(3) {transform: translateZ(-6000px);}
