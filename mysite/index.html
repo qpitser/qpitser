@@ -12,6 +12,49 @@
     <!-- 폰트어썸 cdn연결 -->
     <script src="https://kit.fontawesome.com/ed9c86e28a.js" crossorigin="anonymous"></script>
 
+    <!-- datepicker cdn연결 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+
+    <!-- scrollout cdn 연결 -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                showMonthAfterYear: true,
+                changeYear: true,
+                changeMonth: true,
+                yearSuffix: "년",
+                dateFormat: 'yy년 mm월 dd일',
+                onSelect: function (dateText, inst) {
+                    alert('선택한날짜:' + dateText)
+                }
+            });
+
+
+
+            ScrollOut({
+                onShown: function (el) {
+                    // use the web animation API
+                    el.animate([{ opacity: 0 }, { opacity: 1 }], 1000);
+                },
+                onHidden: function (el) {
+                    // hide the element initially
+                    el.style.opacity = 1;
+                }
+            });
+
+        });
+    </script>
+
+
+
 </head>
 
 <body>
@@ -121,24 +164,33 @@
                 <div class="form">
                     <form action="">
                         <div class="form_in">
-                            <div>프로그램명<br>
-                                <input type="text">
+                            <div>
+                                <label for="">프로그램명</label>
+                                <select name="" id="">
+                                    <option value="">프로그램을 선택해주세요</option>
+                                    <option value="">핸드드립 체험</option>
+                                    <option value="">왁스타블렛 만들기</option>
+                                    <option value="">커스텀향수 만들기</option>
+                                </select>
                             </div>
-                            <div>예약날짜<br>
-                                <input type="text">
+                            <div>
+                                <label for="">예약날짜</label>
+                                <input id="datepicker">
                             </div>
-                            <div>인원<br>
-                                <input type="text">
+                            <div>
+                                <label for="">인원</label>
+                                <input type="number" min="1" max="10" value="1">
                             </div>
-                            <div>전화번호<br>
-                                <input type="text" placeholder="000-0000-0000">
+                            <div>
+                                <label for="">전화번호</label>
+                                <input type="text" placeholder="010-0000-0000">
                             </div>
-                            <span><a href="">예약하기</a></span>
+                            <button>예약하기</button>
                         </div>
 
                     </form>
                 </div>
-                <div>
+                <div class="system_exp">
                     <div class="titleBox">
                         <ul>
                             <li><a href="">핸드드립</a></li>
@@ -156,13 +208,11 @@
                                         <span class="espre">Espresso</span>
                                     </a></li>
                                 <li><a href="">
-                                        <img src="img/handdrip4.jpg" alt="" class="img2" width="250px"
-                                            height="250px">
+                                        <img src="img/handdrip4.jpg" alt="" class="img2" width="250px" height="250px">
                                         <span class="latte">Latte</span>
                                     </a></li>
                                 <li><a href="">
-                                        <img src="img/handdrip5.jpg" alt="" class="img3" width="250px"
-                                            height="250px">
+                                        <img src="img/handdrip5.jpg" alt="" class="img3" width="250px" height="250px">
                                         <span class="cappu">Cappucino</span>
                                     </a></li>
 
@@ -230,7 +280,7 @@
                     <div>
                         <span class="left"></span>
                         <ul>
-                            <li><a href="">핸드드립</a></li>
+                            <li><a href="">왁스타블렛</a></li>
                             <li>
 
                                 <a href="">
@@ -238,9 +288,9 @@
                                     <span><b>커피미식가</b></span>
                                 </a>
                             </li>
-                            <li><a href="">핸드드립 체험은 직접 커피를 내려보면서<br>
-                                    다양한 원두의 맛을 경험할 수 있는 특별<br>
-                                    한 활동입니다. 가이드의 도움으로 .....</a></li>
+                            <li><a href="">왁스타블렛 만들기 체험은 직접 참여<br>
+                                    하면서 색다른 경험을 느낄 수 있었습니다.<br>
+                                    전문 안내자의 도움으로 다양한 종류의 ....</a></li>
                         </ul>
                         <span class="right"></span>
                     </div>
@@ -286,7 +336,7 @@
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.5495052656215!2d128.0022912967895!3d36.90112400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356462da34246dcd%3A0xdd3592a423fbfdd7!2z7Lap7KO8IOy7pO2UvOuwleusvOq0gCAmIOy5tO2OmA!5e0!3m2!1sko!2skr!4v1718090571040!5m2!1sko!2skr"
-                    width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
@@ -351,15 +401,19 @@
                 <div class="online">
                     <h2>온라인 전시관</h2>
                     <ul>
-                        <li><</li>
+                        <li>
+                            <</li>
                         <li><span>1</span>/12</li>
                         <li>></li>
                     </ul>
                     <div class="imgBox">
                         <ul>
                             <li><a href="">
-                                    <div><img src="img/online.webp" alt="" width="620px" height="490pxz"></div>
-                                    <div class="online_txt">커피 문화의 발견<br>세계 각지의 풍부한 유산</div>
+                                    <div>
+                                        <img src="img/online.webp" alt="">
+                                        <div class="online_txt">커피 문화의 발견<br>세계 각지의 풍부한 유산</div>
+                                    </div>
+                                    
                                 </a></li>
                             <li><a href="">
                                     <img src="img/online2.jpg" alt="">
@@ -379,7 +433,7 @@
             <div class="around">
                 <div class="txtBox">
                     <h2><span>주변</span>관광지안내</h2>
-                    <p>충주커피박물관 주변관광지를 소개합니다.</p>
+                    <p>주변관광지를 소개합니다.</p>
                     <ul>
                         <li><a><i class="fa-solid fa-angle-left"></a></i></li>
                         <li><a><i class="fa-solid fa-angle-right"></a></i></li>
@@ -436,35 +490,40 @@
             <div class="experience">
                 <h1>충주커피박물관의 체험장에서는</h1>
                 <div>
-                    <div class="wrap_exp">
+                    <div class="wrap_exp" data-scroll>
                         <div class="imgBox">
                             <div><a href=""><img src="img/how_handdrip.jpg" alt=""></a></div>
                         </div>
-                        <div class="txtBox">
-                            <h3><i class="fa-solid fa-leaf"></i>핸드드립체험</h3>
-                            <p>직접 커피를 내려보면서 다양한 원두의 맛을 경험할 수 있는 특별한 활동입니다.</p>
-                            <p>가이드의 도움으로 커피의 특징과 추출 방법을 배우고, 나만의 맛을 만들어내는 과정을 즐길 수 있습니다.</p>
-                            <p>체험 결과로 만들어진 커피는 깨끗하고 풍부한 맛을 가졌으며, 전문적인 설명을 통해 커피에 대해 깊게 이해할 수 있습니다.</p>
-                            <span><a href="">자세히 보기</a></span>
+                        <div class="txtBox_inner">
+                            <div class="txtBox">
+                                <h3><i class="fa-solid fa-leaf"></i>핸드드립체험</h3>
+                                <p>직접 커피를 내려보면서 다양한 원두의 맛을 경험할 수 있는 특별한 활동입니다.</p>
+                                <p>가이드의 도움으로 커피의 특징과 추출 방법을 배우고, 나만의 맛을 만들어내는 과정을 즐길 수 있습니다.</p>
+                                <p>체험 결과로 만들어진 커피는 깨끗하고 풍부한 맛을 가졌으며, 전문적인 설명을 통해 커피에 대해 깊게 이해할 수 있습니다.</p>
+                                <a href=""><span class="wrap_more">자세히 보기</span></a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="wrap_exp">
-                        <div class="txtBox">
+                    <div class="wrap_exp" data-scroll>
+
+                        <div class="imgBox_001">
+                            <div><a href=""><img src="img/gallery4.jpg" alt=""></a></div>
+                        </div>
+                        <div class="txtBox_001">
                             <h3><i class="fa-solid fa-leaf"></i>왁스타블렛 만들기</h3>
                             <p>밀랍을 녹여주는 단계부터 시작하여 녹인 밀랍 안에 커피 원두를 넣는 과정을 통해 체험이 진행됩니다.</p>
                             <p>자신만의 독특한 디자인을 만들기 위해 다양한 색상과 모양의 밀랍을 사용할 수 있습니다. 커피 가루를 섞어 고유한 향을 만들어 보세요!</p>
                             <p>이러한 '왁스타블렛 만들기' 체험은 참가자들에게 창의성을 발휘하고, 커피에 대한 새로운 경험을 제공하는 좋은 기회가 됩니다.</p>
-                            <span><a href="">자세히 보기</a></span>
+                            <a href=""><span class="wrap_more2">자세히 보기</span></a>
                         </div>
-                        <div class="imgBox_001">
-                            <div><a href=""><img src="img/gallery4.jpg" alt=""></a></div>
-                        </div>
+
                     </div>
                 </div>
                 <div>
-                    <div class="wrap_exp">
+                    <div class="wrap_exp" data-scroll>
                         <div class="imgBox">
                             <div><a href=""><img src="img/how_perpume.jpg" alt=""></a></div>
                         </div>
@@ -473,8 +532,9 @@
                             <p>나만의 커스텀 향수 만들기 체험은 마음에 쏙 드는 향을 찾고, 그것을 나만의 특별한 향수로 만들어낼 수 있는 특별한 체험입니다.</p>
                             <p>먼저, 다양한 향수 원료들을 시향하는 과정은 커피의 향이 주는 활력과 차가운 향수의 상쾌함을 비교하며</p>
                             <p>원하는 향을 찾은 후에는 조향사 선생님의 지도를 받으며, 그 향을 조합해 동시에 창의성을 발휘할 수 있는 재미있는 경험을 할 수 있습니다.</p>
-                            <span><a href="">자세히 보기</a></span>
+                            <a href=""><span class="wrap_more3">자세히 보기</span></a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -528,6 +588,35 @@
         </section>
         <footer></footer>
     </div>
+    <style>
+        /* 예약시스템 캘린더 설정 */
+        .ui-datepicker-header {
+            background-color: #009860;
+            color: #fff;
+        }
+
+        .ui_datepicker tr {
+            background-color: #bb903f;
+        }
+
+        .ui-datepicker table {
+            background-color: #bb903f;
+        }
+        
+        .ui-datepicker td {background-color: #009860;}
+
+        [data-scroll] {
+            transition: opacity 2s;
+        }
+
+        [data-scroll="in"] {
+            opacity: 1;
+        }
+
+        [data-scroll="out"] {
+            opacity: 0;
+        }
+    </style>
 </body>
 
 </html>
