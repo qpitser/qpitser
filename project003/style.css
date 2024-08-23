@@ -63,6 +63,7 @@ a {
     width: 600px;
     animation: pitchAnimation 3s ease-in-out infinite;
     position: absolute;
+    top: 20%;
     right: 0;
 }
 
