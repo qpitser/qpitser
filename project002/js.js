@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+    $(document).ready(function() {
+        // 팝업 열기 함수
+        function openPopup() {
+            $('#popupOverlay').fadeIn();
+        }
+    
+        // 팝업 닫기 함수
+        function closePopup() {
+            $('#popupOverlay').fadeOut();
+        }
+    
+        // 오버레이 클릭 시 팝업 닫기
+        $('#popupOverlay').click(function(e) {
+            if (e.target.id === 'popupOverlay') {
+                closePopup();
+            }
+        });
+    
+        // "쇼핑 계속하기" 버튼 클릭 시 팝업 닫기
+        $('.shop_keep').click(function() {
+            closePopup();
+        });
+    
+        // "장바구니 이동" 버튼 클릭 시 팝업 닫기
+        $('.shop_basket').click(function() {
+            closePopup();
+            // 장바구니로 이동하는 추가 로직
+            $('.shop').css({'display' : 'flex'})
+        });
+    
+        // 팝업을 열고 싶을 때 호출
+        // openPopup();
+    });
+
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
         var windowHeight = $(this).height();
@@ -73,6 +107,10 @@ $(document).ready(function(){
         let price = parseInt($(this).parents('a').find('.price').text());
     totalAmount += price;
     $('.shop').find('.total span').eq(1).text(totalAmount);
+
+
+        // 장바구니 팝업창표시
+        $('.shopping_bg').css({'display' : 'flex'})
     })
 
     $('.empty').click(function(e){
@@ -159,11 +197,6 @@ $(document).ready(function(){
                 slide = setInterval(timer, 3000)
 
             })
-
-    $('.shopping_bg').click(function(){
-        $(this).css({'opacity' : '0'})
-
-    })
     
     
 
