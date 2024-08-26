@@ -67,10 +67,12 @@ a {
     right: 0;
 }
 
-.ball-rotate {width: 200px;
+.ball-rotate {
+    width: 200px;
     position: absolute;
     top: 30%;
-    animation: rotateBall 1s linear infinite, moveBall 3s ease-in-out infinite;}
+    animation: rotateBall 1s linear infinite, moveBall 3s ease-in-out infinite;
+}
 
 .loading-text {
     color: white;
@@ -97,7 +99,8 @@ a {
     font-family: 'Arial Black', sans-serif;
 }
 
-.intro-slide2 h1 {font-size: 5rem;
+.intro-slide2 h1 {
+    font-size: 5rem;
     text-align: center;
     letter-spacing: 0.3rem;
     color: #005A9C;
@@ -105,43 +108,78 @@ a {
     top: 50%;
     left: 50%;
     margin-left: -450px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 
-                 0 0 10px rgba(239, 62, 66, 1),
-                 -3px -3px 10px rgba(0, 0, 0, 0.5);}
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(239, 62, 66, 1),
+        -3px -3px 10px rgba(0, 0, 0, 0.5);
+}
 
-.intro-slide2 h2 {color: #EF3E42;
+.intro-slide2 h2 {
+    color: #EF3E42;
     position: absolute;
     top: 60%;
     left: 50%;
-    margin-left: -300px;}
+    margin-left: -300px;
+}
 
-.uni_dodger {position: absolute;
-    left: 10%;}
+.uni_dodger {
+    position: absolute;
+    left: 10%;
+}
 
-.uni_hanwha {position: absolute;
-    right: 10%;}
+.uni_hanwha {
+    position: absolute;
+    right: 10%;
+}
 
 /* 애니메이션 효과 */
 @keyframes pitchAnimation {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(50px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes blinkAnimation {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes rotateBall {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes moveBall {
-    0% { left: 30%; }
-    50% { left: 60%;  }
-    100% { left: 30%;  }
+    0% {
+        left: 30%;
+    }
+
+    50% {
+        left: 60%;
+    }
+
+    100% {
+        left: 30%;
+    }
 }
 
 /* 헤더설정 */
@@ -1802,7 +1840,9 @@ article {
     transform: translateZ(-20000px);
 }
 
-.art5.off {display: none;}
+.art5.off {
+    display: none;
+}
 
 /* 갤러리 박스설정 */
 
@@ -1811,7 +1851,7 @@ article {
     height: 100vh;
     display: flex;
     position: relative;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .art3.on {
@@ -1838,24 +1878,18 @@ article {
 
 .art3 .gallery nav ul li {
     font-size: 24px;
-    color: #fff;
+    color: #EF3E42;
     cursor: pointer;
     padding: 20px;
 }
 
 .art3 .gallery nav ul li:hover {
     font-weight: bold;
-}
-
-.art3 .gallery nav ul li:nth-child(3):hover {
     color: #005A9C;
 }
 
 .art3 .gallery nav ul li.on {
     font-weight: bold;
-}
-
-.art3 .gallery .life li:nth-child(3).on {
     color: #005A9C;
 }
 
@@ -1900,7 +1934,9 @@ article {
     opacity: 0;
 }
 
-.art3.off {display: none;}
+.art3.off {
+    display: none;
+}
 
 
 .gallery_img.on p:nth-child(1) {
@@ -2066,5 +2102,4 @@ article {
     justify-content: center;
 }
 
-.panel-content h2 {
-}
+.panel-content h2 {}
