@@ -1491,7 +1491,7 @@ article {
     color: #000;
     position: fixed;
     background-color: #fff;
-    perspective: 1000px;
+    perspective: 1500px;
     height: 100%;
 }
 
@@ -2099,7 +2099,8 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    
 }
 
-.panel-content h2 {}
+.panel-content h2 {font-size: 28px;}

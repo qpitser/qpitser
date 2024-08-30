@@ -1,0 +1,471 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+
+body {overflow: hidden;}
+
+li {list-style: none;}
+@font-face {font-family: 'Regular Brush';
+    src: url(regular-brush.ttf);}
+
+
+/* 인트로페이지 설정 */
+.intro {width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;}
+
+
+/* 라이트버전 설정 */
+
+.light {width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;}
+
+.name {display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;}
+
+.name p {font-size: 20px;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: bold;}
+
+.name div {width: 300px;
+    background-color: #000;
+    height: 1px;}
+
+.name h3 {font-family: 'Regular Brush', Arial, sans-serif;
+    font-size: 24px;}
+
+.intro_main {width: 100%;
+    display: flex;
+    background-color: #fff;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+
+.main_text {margin-top: 30px;
+    font-size: 80px;
+    font-family: 'Regular Brush', Arial, sans-serif;}
+
+.intro .light_img {position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    }
+
+    .sun.move-right {
+        transform: translate(1000px, -50%); /* 우측으로 이동 */
+        opacity: 0;
+    }
+
+
+/* 다크버전 설정 */
+
+.dark {width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #252525;
+    display: none;}
+
+.dark .name {color: #fff;}
+
+.dark .name div {background-color: #fff;}
+
+.dark .intro_main {background-color: #252525;}
+
+.dark .main_circle {background-color: #fff;}
+
+.dark .main_text {color: #fff;}
+
+.dark .main_star {margin-top: -300px;}
+
+.intro .dark_img2 {position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    }
+
+    .star.move-left {
+        transform: translate(950px, -50%); /* 좌측으로 이동 */
+        opacity: 1;
+    }
+
+/* 해 모양 */
+.sun {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: sunMove 4s ease-in-out forwards;
+}
+
+/* 별 모양 */
+.star {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 200px;
+    height: 200px;
+    background-image: url('path_to_star_image'); /* 별 이미지 경로 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: starMove 4s ease-in-out forwards;
+    cursor: pointer;
+}
+
+/* 해가 곡선을 그리며 지는 애니메이션 */
+@keyframes sunMove {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(300px, -50%);
+    }
+    100% {
+        transform: translate(1000px, 400px);
+        opacity: 0;
+    }
+}
+
+/* 별이 곡선을 그리며 뜨는 애니메이션 */
+@keyframes starMove {
+    0% {
+        transform: translate(-10%, -0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-300px, -200px);
+        opacity: 1;
+    }
+}
+
+/* 헤더설정 */
+
+.main {perspective: 2000px;
+    position: relative;}
+
+.menu {position: fixed;
+    width: 50%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 9;}
+
+    .main .menu li {color: #fff;
+        font-family: 'Regular Brush', Arial, sans-serif;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px;}
+
+    .main .menu li:nth-child(1).active {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); 
+    animation: neon-flicker 1s infinite alternate;
+    }
+
+    .main .menu li:nth-child(2).active {
+        text-shadow: 0 0 10px rgba(187, 144, 63, 0.7); 
+    animation: neon-flicker2 1s infinite alternate;
+    color: #bb903f;
+
+    }
+
+    .main .menu li:nth-child(3).active {
+        text-shadow: 0 0 10px rgba(187, 144, 63, 0.7); 
+    animation: neon-flicker2 1s infinite alternate;
+    color: #04a6f0;
+
+    }
+
+    .main .menu li:nth-child(4).active {
+        text-shadow: 0 0 10px rgba(187, 144, 63, 0.7); 
+    animation: neon-flicker2 1s infinite alternate;
+    color: #F37321;
+
+    }
+
+
+    .category {
+        display: inline-block;
+        margin-right: 20px;
+        padding-bottom: 5px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .category:before,
+.category:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.category:nth-child(2):before,
+.category:nth-child(2):after {
+    background-color: #009860;
+}
+
+.category:nth-child(3):before,
+.category:nth-child(3):after {
+    background-color: #000000;
+}
+
+.category:nth-child(4):before,
+.category:nth-child(4):after {
+    background-color: #005A9C;
+}
+
+.category:before {
+    bottom: 0;
+}
+
+.category:after {
+    bottom: -5px;
+}
+
+.category.active:before,
+.category.active:after {
+    transform: scaleX(1);
+}
+
+.category.active:after {
+    transform: scaleX(1);
+}
+
+    /* 네온효과 애니메이션 */
+    @keyframes neon-flicker {
+        0% {
+            text-shadow: 
+            0 0 5px rgba(0, 255, 255, 0.7), 
+            0 0 15px rgba(0, 255, 255, 0.7), 
+            0 0 25px rgba(0, 255, 255, 0.7);
+        }
+        100% {
+            text-shadow: 
+            0 0 15px rgba(0, 255, 255, 0.7), 
+            0 0 25px rgba(0, 255, 255, 0.7), 
+            0 0 35px rgba(0, 255, 255, 0.7);
+        }
+    }
+
+    @keyframes neon-flicker2 {
+        0% {
+            text-shadow: 
+            0 0 10px rgba(0, 152, 96, 0.7), 
+            0 0 20px rgba(0, 152, 96, 0.7), 
+            0 0 30px rgba(0, 152, 96, 0.7);
+        }
+        100% {
+            text-shadow: 
+            0 0 20px rgba(0, 152, 96, 0.7), 
+            0 0 30px rgba(0, 152, 96, 0.7), 
+            0 0 40px rgba(0, 152, 96, 0.7);
+        }
+    }
+
+/* 큐브설정 */
+.cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s ease-in-out;
+}
+
+.cube>div.on {z-index: 4;}
+
+/* 큐브 회전설정 */
+
+.profile   { transform: rotateY(  0deg) translateZ(0px); }
+.chungju   { transform: rotateY( 90deg) translateZ(0px); }
+.powerade  { transform: rotateY(180deg) translateZ(0px); }
+.ryu       { transform: rotateY(-90deg) translateZ(0px); }
+
+/* 프로필 설정 */
+
+
+.profile {width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;}
+
+
+.main .main_img {width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -100px;
+    margin-top: -100px;}
+
+
+.profile .left_con {width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;}
+
+.profile .left_con div {width: 200px;
+    height: 200px;
+    background-image: url(img/Ellipse\ 1.png);
+    background-size: cover;
+    border-radius: 50%;}
+
+.profile .left_con h3 {color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;}
+
+.profile .left_con p {color: #7E7E7E;
+    line-height: 2;}
+
+.big_star {width: 700px;
+    position: absolute;
+    left: 30%;
+    top: 20%;}
+
+.profile .little_star {position: absolute;
+    width: 60px;
+    top: 10%;
+    left: 5%;}
+
+.profile .right_con {width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;}
+
+.profile .right_con h3 {color: #fff;
+    font-size: 24px;
+    font-family: "Playfair Display", sans-serif;
+    line-height: 3;}
+
+.profile .right_con p {color: #7E7E7E;
+    line-height: 3;}
+
+.profile .about {
+    width: 30%;
+    height: 200px;
+    position: relative;
+    top: 25%;
+    left: 10%;
+    margin-top: -100px;}
+
+.profile .about span {color: #F5F5F5;
+    margin-left: 50px;}
+
+.profile .license {
+    width: 200px;
+        height: 200px;
+        left: 60%;
+        top: 35px;
+        position: relative;}
+
+.profile .skill {width: 600px;
+    height: 700px;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;}
+
+    .profile .skill .chart {text-align: center;}
+
+    .canvas_wrap {
+        position: relative;
+        max-width: 100px;
+        max-height: 100px;
+        margin: 10px 10px;
+    }
+    
+    .canvas_wrap .percent {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        color: #3949AB;
+        transform: translate(-50%, -50%);
+    }
+    
+    .canvas_wrap canvas {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .skill .chart {display: flex;}
+    
+.profile .edu {position: relative;
+    left: 60%;
+    top: -27%;
+    width: 400px;}
+
+.profile .keyword {position: relative;
+    left: 0;
+    top: -10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+
+.profile .keyword_in {display: flex;}
+
+.profile .keyword_in p {width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    line-height: 6;
+    height: 100px;
+    margin: 0 20px;}
+
+/* 청주 커피 박물관 설정 */
+
+.chungju {position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    z-index: 1;}
+
+
+/* 파워에이드 설정 */
+
+.powerade {position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    z-index: 1;}
+
+/* 류현진 팬사이트 설정 */
+
+.ryu {position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    z-index: 1;}
+    /* 입사자 비율 퇴사자비율 "가족기업 걸러야함" */

@@ -62,7 +62,7 @@ $(document).ready(function () {
                     'transform': 'translateZ(' + (sc + -(i2 * 3500) + 'px')
                 });
 
-                if (sc >= i2 * 3000 && sc < (i2 + 1) * 3000) {
+                if (sc >= i2 * 2500 && sc < (i2 + 1) * 2500) {
                     $this.find('.game').removeClass('on');
                     $this.find('.game').eq(i2).addClass('on');
                 }
@@ -106,8 +106,8 @@ $(document).ready(function () {
             }
         }
 
-        // z 위치가 7500px 이상일 때 비디오 재생 10000 미만일때 비디오 정지
-        if (scrollTop >= 7500 && scrollTop < 10000) {
+        // z 위치가 9000px 이상일 때 비디오 재생 11500 미만일때 비디오 정지
+        if (scrollTop >= 9000 && scrollTop < 11500) {
             if ($("#Video2")[0].paused) {
                 $("#Video2")[0].play();
             }
