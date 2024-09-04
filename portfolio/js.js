@@ -28,6 +28,8 @@ $(document).ready(function () {
         if (!$('.profile').hasClass('animated')) {
             $('.profile').addClass('animated');
 
+            // 원형차트
+
             // canvas 애니메이션 실행
             $('.profile .canvas').each(function () {
                 const imageContainer = $(this).siblings('.image-container');
@@ -92,6 +94,19 @@ $(document).ready(function () {
 
     })
 
+    $('.concept').click(function(){
+        $('.slide-panel').css({'left' : '-100%'})
+        $('.popup').css({'z-index' : '1', 'opacity' : '1' })
+
+    })
+
+    $('.popup').click(function(){
+        $('.slide-panel').css({'left' : '0'})
+        $('.popup').css({'z-index' : '-1', 'opacity' : '0'})
+
+    })
+
+
 
     $('.category').on('click', function () {
         var i = $(this).index()
@@ -103,7 +118,20 @@ $(document).ready(function () {
 
         // 클릭된 카테고리에 active 클래스 추가
         $(this).addClass('active');
+
+        // 데이터 속성으로부터 카테고리 이름 가져오기
+        const category = $(this).data("category");
+
+        // 프로필이 아닌 경우에만 패널 열기
+        if (category !== "profile") {
+            openPanel(category);
+        } else {
+            closePanel(); // 프로필 클릭 시 패널이 닫히도록 설정
+        }
+        
     });
+
+    // 큐브애니메이션
 
     const $cube = $('.cube');
     const $menuItems = $('.menu li');
@@ -111,7 +139,7 @@ $(document).ready(function () {
     // 초기 상태 설정
     let currentRotation = 0;
 
-    $menuItems.on('click', function() {
+    $menuItems.on('click', function () {
         // 클릭된 카테고리 인덱스에 따라 회전 각도 계산
         const index = $(this).index();
         currentRotation = -90 * index;
@@ -122,7 +150,91 @@ $(document).ready(function () {
         // 모든 메뉴 아이템에서 active 클래스 제거하고 클릭된 아이템에 추가
         $menuItems.removeClass('active');
         $(this).addClass('active');
+
     });
+
+    // 슬라이드패널
+
+    function openPanel(category) {
+        let content = "";
+
+        switch (category) {
+            case 'chungju':
+                content = `<h2 class="header">충주커피박물관</h2>
+                <h3 class="header_info">충주커피박물관 웹사이트 리뉴얼</h3>
+                <p class="work_time">작업시간 : 60H</p>
+                <p class="overview">OVERVIEW</p>
+                <p class="overview_txt">목표: 커피와 자연이 어우러지는 휴식처를 제공<br>
+            
+                리뉴얼 목적: 기존 박물관의 기능성 개선<br>
+                </p>
+                <ul class="publish">퍼블리싱
+                <li>접근성 향상</li>
+                <li>반응형 웹 구현</li>
+                <li>예약 시스템 활성화</li>
+                </ul>`;
+                break;
+            case 'powerade':
+                content = `<h2 class="header_power">파워에이드</h2>
+                <h3 class="info_power">파워에이드 웹사이트 리뉴얼</h3>
+                <p class="work_time">작업시간 : 72H</p>
+                <p class="overview">OVERVIEW</p>
+                <p class="overview_txt">목표: 파리올림픽 공식 스포츠 음료인 파워에이드 소개<br>
+                
+                리뉴얼 목적: 기존사이트와 다른 동적인 요소 추가<br>
+                </p>
+                <ul class="publish">퍼블리싱
+                <li>애니메이션(패럴랙스 스크롤 등)</li>
+                <li>장바구니 기능, 페이지 제작</li>
+                <li>로그인페이지</li>
+                </ul>`;
+                break;
+            case 'ryu':
+                content = `<h2 class="header_ryu">Hyun-Jin RYU</h2>
+                <h3 class="info_ryu">류현진 팬사이트 제작</h3>
+                <p class="work_time">작업시간 : 86H</p>
+                <p class="overview">OVERVIEW</p>
+                <p class="overview_txt">목표: 류현진 선수의 전성기를 느낄 수 있는 페이지<br>
+                </p>
+                <ul class="publish">퍼블리싱
+                <li>인트로페이지 2개로 구성</li>
+                <li>translateZ를 이용한 구조(Video)</li>
+                <li>슬라이드 팝업(Photo)</li>
+                </ul>
+                `;
+                break;
+        }
+
+        
+
+        // 패널에 내용 로드 및 슬라이드 패널 열기
+        $("#panelContent").html(content);
+        $("#slidePanel").css("width", "400px");
+
+        // 패널이 완전히 열리면 내용을 보이게 함
+        setTimeout(function() {
+            $("#panelContent").css("visibility", "visible");
+        }, 500);
+
+        currentCategory = category; // 현재 카테고리 업데이트
+    }
+
+    function closePanel(callback) {
+        $("#slidePanel").css("width", "0");
+
+        // 패널이 닫힐 때 내용을 숨김
+        $("#panelContent").css("visibility", "hidden");
+
+        currentCategory = ""; // 현재 카테고리 초기화
+
+        // 패널이 닫히는 애니메이션이 완료된 후 콜백 실행
+        setTimeout(function() {
+            if (callback) callback();
+        }, 500); // 애니메이션이 0.5초 동안 진행되므로 이 시간에 맞춰 딜레이 설정
+    }
+
+
+
 
 
 });

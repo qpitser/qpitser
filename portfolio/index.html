@@ -52,10 +52,10 @@
         <!-- 헤더, 메뉴 -->
         <header>
             <nav class="menu">
-                <li class="category active">Profile</li>
-                <li class="category">Chungju</li>
-                <li class="category">PowerAde</li>
-                <li class="category">Hyun-Jin Ryu</li>
+                <li class="category active" data-category="profile">Profile</li>
+                <li class="category" data-category="chungju">Chungju</li>
+                <li class="category" data-category="powerade">PowerAde</li>
+                <li class="category" data-category="ryu">Hyun-Jin Ryu</li>
             </nav>
         </header>
         <div class="cube">
@@ -122,34 +122,57 @@
                     </div>
                     <div class="edu">
                         <h3>EDUCATION</h3>
-                        <p>NCS UI/UX & 프론트엔드 개발자 양성과정 수료</p>
-    
+                        <p>2024 <span>NCS UI/UX & 프론트엔드 개발자 양성과정 수료</span></p>
+                        <p>2020 <span>대전보문고등학교 졸업</span></p>
                     </div>
                     <div class="keyword">
                         <h3>KEYWORD</h3>
                         <div class="keyword_in">
-                            <p>성실함</p>
-                            <p>근면함</p>
-                            <p>내성적</p>
-                            <p>책임감</p>
+                            <p class="keyword_1">성실함</p>
+                            <p class="keyword_2">근면함</p>
+                            <p class="keyword_3">내성적</p>
+                            <p class="keyword_4">소심함</p>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
             <div class="chungju">
                 <img src="img/main.png" alt="" class="main_img">
                 <img src="img/profile_star.png" alt="" class="big_star">
+                <div class="mockup">
+                    <span class="concept">CONCEPT VIEW</span><a href="https://qpitser.github.io/qpitser/project001/" target="_blank"><span class="site">VIEW SITE</span></a>
+                </div>
+                
+                <div class="popup">
+                    <div class="popup_in"><img src="img/portfolio_concept.png" alt=""></div>
+                </div>
             </div>
             <div class="powerade">
                 <img src="img/main.png" alt="" class="main_img">
                 <img src="img/profile_star.png" alt="" class="big_star">
+                <div class="mockup">
+                    <span class="concept">CONCEPT VIEW</span><a href="https://qpitser.github.io/qpitser/project002/" target="_blank"><span class="site">VIEW SITE</span></a>
+                </div>
+                
+                <div class="popup">
+                    <div class="popup_in"><img src="img/portfolio2_concept.png" alt=""></div>
+                </div>
             </div>
             <div class="ryu">
                 <img src="img/main.png" alt="" class="main_img">
                 <img src="img/profile_star.png" alt="" class="big_star">
+                <div class="mockup">
+                    <span class="concept">CONCEPT VIEW</span><a href="https://qpitser.github.io/qpitser/project003/" target="_blank"><span class="site">VIEW SITE</span></a>
+                </div>
+                <div class="popup">
+                    <div class="popup_in"><img src="img/portfolio3_concept.png" alt=""></div>
+                </div>
             </div>
         </div>
+    </div>
+    <div id="slidePanel" class="slide-panel">
+        <div id="panelContent" class="panel-content"></div>
     </div>
 
 </body>
