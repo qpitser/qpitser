@@ -404,9 +404,12 @@ header {}
     flex-direction: column;
 }
 
+/* 핸드드립 설정 */
+
 .system .listBox ul li .img1 {
     left: 20px;
     top: 50px;
+    height: 250px;
 }
 
 .system .listBox ul li .img2 {
@@ -446,8 +449,32 @@ header {}
     text-shadow: #2d8d5b 3px 3px 3px;
 }
 
+.system .listBox .handdrip {
+        display: none;
+}
+
+/* 왁스타블렛 설정 */
+
 .system .listBox div:nth-child(3) {
-    display: none;
+}
+
+.system .listBox ul li .diffu {
+    left: 50px;
+    bottom: 100px;
+    text-shadow: #2d8d5b 3px 3px 3px;
+}
+
+.system .listBox ul li .design {
+    left: 50%;
+    margin-left: -85px;
+    bottom: 250px;
+    text-shadow: #2d8d5b 3px 3px 3px;
+}
+
+.system .listBox ul li .nature {
+    right: 60px;
+    bottom: 100px;
+    text-shadow: #2d8d5b 3px 3px 3px;
 }
 
 .system .listBox div:nth-child(4) {
@@ -573,6 +600,11 @@ header {}
 
 
 /* 오시는길 설정 */
+
+.map_txt {font-size: 32px;
+    color: #fff;
+margin-bottom: 20px;
+    font-weight: bold;}
 
 .map {
     width: 100%;
@@ -930,42 +962,39 @@ section:nth-child(9) span {
 
 .cafe .titleBox ul li {
     padding-left: 30px;
-    margin: 20px 0;
-}
-
-.cafe .titleBox ul li a {
+    margin: 20px 20px;
+    cursor: pointer;
     font-size: 24px;
     font-family: "Merriweather", serif;
     border-left: 1px solid #d9d9d9;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
-.cafe .titleBox ul li a:hover {
+.cafe .titleBox ul li:hover {
     color: #fff;
     font-weight: bold;
 }
 
-.cafe .titleBox ul li:nth-child(1) a:nth-child(1) {
+.cafe .titleBox ul li:nth-child(1) {
     border-style: none;
 }
 
 .cafe .imgBox {
     display: flex;
     justify-content: center;
-}
-
-.cafe .imgBox .listBox ul {
-    width: 100%;
-    display: flex;
     position: relative;
 }
 
-.cafe .imgBox .listBox ul:nth-child(2) {
+.cafe .imgBox .listBox .menu {
+    width: 100%;
     display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.cafe .imgBox .listBox ul:nth-child(3) {
-    display: none;
+.cafe .imgBox .listBox .menu.on {
+    display: flex;
 }
 
 .cafe .imgBox .listBox ul li {
@@ -1764,6 +1793,8 @@ footer p {color: #fff;
         padding: 0 20px;
         line-height: 30px;
     }
+
+    .cafe .imgBox .listBox ul li:nth-child(3) {display: none;}
 
 }
 

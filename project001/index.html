@@ -21,6 +21,19 @@
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
     <script>
+        $(document).ready(function(){
+
+            $('.cafe .titleBox ul li').click(function(){
+               var i = $(this).index()
+               $('.menu').eq(i-1).css({'display' : 'none'})
+               $('.menu').eq(i-2).css({'display' : 'none'})
+               $('.menu').eq(i+1).css({'display' : 'none'})
+               $('.menu').eq(i).css({'display' : 'flex'})
+
+            })
+
+
+        })
         $(function () {
             $("#datepicker").datepicker({
                 dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
@@ -200,11 +213,12 @@
                         </ul>
                     </div>
                     <div class="listBox">
-                        <p>직접 다양한 종류의 커피를 내려보면서 다양한 원두의 맛을 경험할 수 있는 특별한 활동입니다.</p>
-                        <div>
+                        
+                        <div class="handdrip">
+                           <p>직접 다양한 종류의 커피를 내려보면서 다양한 원두의 맛을 경험할 수 있는 특별한 체험입니다.</p> 
                             <ul>
                                 <li><a href="">
-                                        <img src="img/handdrip1.jpg" alt="" class="img1" width="250px">
+                                        <img src="img/handdrip1.jpg" alt="" class="img1" width="250px" height="250px">
                                         <span class="espre">Espresso</span>
                                     </a></li>
                                 <li><a href="">
@@ -218,19 +232,20 @@
 
                             </ul>
                         </div>
-                        <div>
+                        <div class="waksta">
+                            <p>은은한 커피 향과 자연스러운 밀랍의 조화로 향긋한 향기와 개인의 디자인을 뽐낼 수 있는 체험입니다.</p>
                             <ul>
                                 <li><a href="">
-                                        <img src="" alt="">
-                                        <span>Diffuser</span>
+                                        <img src="img/waksta2.jpg" alt="" class="img1" width="250px">
+                                        <span class="diffu">Diffuser</span>
                                     </a></li>
                                 <li><a href="">
-                                        <img src="" alt="">
-                                        <span>Design</span>
+                                        <img src="img/waksta3.jpg" alt="" class="img2" width="250px" height="250px">
+                                        <span class="design">Design</span>
                                     </a></li>
                                 <li><a href="">
-                                        <img src="" alt="">
-                                        <span>Nature</span>
+                                        <img src="img/waksta4.jpg" alt="" class="img3" width="250px" height="250px">
+                                        <span class="nature">Nature</span>
                                     </a></li>
 
                             </ul>
@@ -332,7 +347,7 @@
             </div>
         </section>
         <section>
-            <p>오시는길</p>
+            <p class="map_txt">오시는길</p>
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.5495052656215!2d128.0022912967895!3d36.90112400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356462da34246dcd%3A0xdd3592a423fbfdd7!2z7Lap7KO8IOy7pO2UvOuwleusvOq0gCAmIOy5tO2OmA!5e0!3m2!1sko!2skr!4v1718090571040!5m2!1sko!2skr"
@@ -546,15 +561,15 @@
             <div class="cafe">
                 <div class="titleBox">
                     <ul>
-                        <li><a href="">Espresso</a></li>
-                        <li><a href="">Blended</a></li>
-                        <li><a href="">Cappucino</a></li>
+                        <li>Espresso</li>
+                        <li>Blended</li>
+                        <li>Cappucino</li>
 
                     </ul>
                 </div>
                 <div class="imgBox">
                     <div class="listBox">
-                        <ul>
+                        <ul class="menu on">
                             <li>
                                 <div><img src="img/americano.png" alt="" width="275px" height="250px"></div>
                                 <h3>아메리카노</h3>
@@ -571,15 +586,39 @@
                                 <p>풍부한 에스프레소와 부드러운 우유,<br> 달콤한 카라멜 소스가 어우러진<br> 카라멜 마키아또</p>
                             </li>
                         </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul class="menu">
+                            <li>
+                                <div><img src="img/cafe latte.jpg" alt="" width="275px" height="250px"></div>
+                                <h3>카페라떼</h3>
+                                <p>신선한 원두의 깊은 풍미와 깔끔한 맛<br>을 즐길 수 있는 아메리카노</p>
+                            </li>
+                            <li>
+                                <div><img src="img/americano.png" alt="" width="275px" height="250px"></div>
+                                <h3>아메리카노</h3>
+                                <p>신선한 원두의 깊은 풍미와 깔끔한 맛<br>을 즐길 수 있는 아메리카노</p>
+                            </li>
+                            <li>
+                                <div><img src="img/americano.png" alt="" width="275px" height="250px"></div>
+                                <h3>아메리카노</h3>
+                                <p>신선한 원두의 깊은 풍미와 깔끔한 맛<br>을 즐길 수 있는 아메리카노</p>
+                            </li>
                         </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul class="menu">
+                            <li>
+                                <div><img src="img/cappucino.png" alt="" width="275px" height="250px"></div>
+                                <h3>카푸치노</h3>
+                                <p>진한 에스프레소에 우유 거품이 어우러져 부드럽고 고소한 맛을 느낄 수 있는 커피</p>
+                            </li>
+                            <li>
+                                <div><img src="img/cinamon.png" alt="" width="275px" height="250px"></div>
+                                <h3>시나몬 카푸치노</h3>
+                                <p>카푸치노에 시나몬 향이 더해져 따뜻하고 달콤한 향신료의 풍미가 가미된 커피</p>
+                            </li>
+                            <li>
+                                <div><img src="img/flatwhite.png" alt="" width="275px" height="250px"></div>
+                                <h3>플랫 화이트</h3>
+                                <p>에스프레소에 미세한 스팀 밀크가 섞여 크리미하면서도 진한 커피 본연의 맛을 살린 음료</p>
+                            </li>
                         </ul>
                     </div>
                 </div>

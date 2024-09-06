@@ -695,7 +695,7 @@ li {
     width: 1200px;
     height: 600px;
     margin-left: 710px;
-    background-image: url(img/powerade.png);
+    background-image: url(img/ryu.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -716,6 +716,7 @@ li {
     text-align: center;
     line-height: 3;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .ryu .concept {
