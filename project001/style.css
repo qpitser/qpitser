@@ -115,6 +115,8 @@ section h1 {
 /* 헤더설정 */
 header {}
 
+header h2 {display: none;}
+
 .main {
     display: flex;
     align-items: flex-end;
@@ -1803,6 +1805,26 @@ footer p {color: #fff;
 /* 모바일 구간 */
 
 @media (max-width:767px) {
+
+    /* 유틸설정 */
+
+header nav {display: none;}
+
+header h2 {}
+
+.main .util {
+    position: absolute;
+    right: 80px;
+    top: 0;
+}
+
+.util ul {
+    display: none;
+}
+
+.util div {
+    background-color: #fff;
+}
 
     /* 갤러리 설정 */
     .gallery .imgBox {
